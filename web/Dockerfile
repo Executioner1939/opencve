@@ -3,7 +3,7 @@ FROM python:3.11-slim-bookworm AS base
 # Builder
 FROM base AS builder
 
-ARG OPENCVE_REPOSITORY="https://github.com/opencve/opencve.git"
+ARG OPENCVE_REPOSITORY="https://github.com/Executioner1939/opencve.git"
 ARG OPENCVE_VERSION="master"
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
@@ -29,7 +29,7 @@ ARG OPENCVE_REPOSITORY
 ARG GUNICORN_CMD_ARGS
 
 LABEL name="opencve"
-LABEL maintainer="dev@opencve.io"
+LABEL maintainer="Executioner1939"
 LABEL url="${OPENCVE_REPOSITORY}"
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y\
