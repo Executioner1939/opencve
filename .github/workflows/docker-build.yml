@@ -3,11 +3,9 @@ name: Build and Release
 
 on:
   push:
-    branches:
-      - main
-      - master
     tags:
       - 'v*'
+  workflow_dispatch:
 
 concurrency:
   group: build-release-${{ github.ref }}
